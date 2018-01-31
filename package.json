@@ -10,6 +10,7 @@
     "react-scripts": "1.1.0"
   },
   "dependencies": {
+    "aphrodite": "^1.2.5",
     "apollo-cache-inmemory": "^1.1.5",
     "apollo-client": "^2.2.0",
     "apollo-link-http": "^1.3.2",
