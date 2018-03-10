@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
+import BookDetails from '../books/BookDetails'
 
 class BookPage extends Component {
   render() {
     return (
       <div className={css(styles['book-page'])}>
-        Book
+        <BookDetails id={this.props.match.params.id} />
       </div>
     );
   }

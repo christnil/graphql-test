@@ -1,31 +1,38 @@
 import shortid from 'shortid';
 
 const ids = [];
-const urls = {};
+const pages = {};
 
 const home = {
   id: shortid.generate(),
-  text: 'Home',
   url: '/',
 };
 
 const books = {
   id: shortid.generate(),
-  text: 'Books',
   url: '/books',
+  components: [
+    {
+      type: 'bookList',
+    },
+  ],
 };
 
 const authors = {
   id: shortid.generate(),
-  text: 'Authors',
   url: '/authors',
+  components: [
+    {
+      type: 'authorList',
+    },
+  ],
 };
 
 ids.push(home.id);
 ids.push(books.id);
 ids.push(authors.id);
-urls[home.id] = home;
-urls[books.id] = books;
-urls[authors.id] = authors;
+pages[home.id] = home;
+pages[books.id] = books;
+pages[authors.id] = authors;
 
-export const list = () => ids.map(id => urls[id]);
+export const get = (id) => pages[id];

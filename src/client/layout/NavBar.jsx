@@ -9,7 +9,6 @@ import valueIn from '../../utils/valueIn';
 class NavBar extends Component {
   render() {
     const navLinks = valueIn(this.props, 'data.navLinks', []);
-    console.log(navLinks, this.props);
     if (!navLinks) {
       return false;
     }
@@ -21,7 +20,6 @@ class NavBar extends Component {
             to={link.url}
             className={css(styles['nav-link'])}
             activeClassName={css(styles['nav-link--selected'])}
-            isActive={(a, b) => console.log('ab', a, b)}
           >
             {link.text}
           </NavLink>

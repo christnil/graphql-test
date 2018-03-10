@@ -23,8 +23,8 @@ class AuthorDetails extends Component {
 
 export default graphql(
   gql`
-    query AuthorQuery ($key: ID!) {
-      author(key: $key) {
+    query AuthorQuery ($id: ID!) {
+      author(id: $id) {
         name
         id
         books {
@@ -36,7 +36,7 @@ export default graphql(
   `, {
     options: props => ({
       variables: {
-        key: props.match.params.authorKey,
+        id: props.match.params.authorKey,
       },
     }),
   }
