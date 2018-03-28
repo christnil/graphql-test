@@ -31,12 +31,12 @@ class NavBar extends Component {
 
 const styles = StyleSheet.create({
   'nav-link': {
-      color: 'black',
-      padding: '8px 16px',
+    color: 'black',
+    padding: '8px 16px',
   },
 
   'nav-link--selected': {
-      color: 'blue',
+    color: 'blue',
   },
 });
 

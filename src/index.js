@@ -10,7 +10,7 @@ import registerServiceWorker from './client/registerServiceWorker';
 
 const client = new ApolloClient({
   link: new HttpLink(),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
@@ -21,6 +21,6 @@ ReactDOM.render(
       </Router>
     </ApolloProvider>
   ),
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 registerServiceWorker();

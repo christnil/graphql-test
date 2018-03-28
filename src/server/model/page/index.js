@@ -6,6 +6,7 @@ const pages = {};
 const home = {
   id: shortid.generate(),
   url: '/',
+  components: [],
 };
 
 const books = {
@@ -35,4 +36,6 @@ pages[home.id] = home;
 pages[books.id] = books;
 pages[authors.id] = authors;
 
-export const get = (id) => pages[id];
+export const get = id => pages[id];
+
+export const list = () => ids.map(id => pages[id]);

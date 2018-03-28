@@ -26,7 +26,7 @@ router.get('/graphql', graphqlKoa({ schema }));
 
 // Setup the /graphiql route to show the GraphiQL UI
 router.get('/graphiql', graphiqlKoa({
-    endpointURL: '/graphql' // a POST endpoint that GraphiQL will make the actual requests to
+  endpointURL: '/graphql', // a POST endpoint that GraphiQL will make the actual requests to
 }));
 
 app.use(router.routes());

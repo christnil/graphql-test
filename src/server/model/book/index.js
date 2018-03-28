@@ -24,8 +24,8 @@ const mockBooks = [
 
 export const list = () => mockBooks;
 
-export const get = (id) => mockBooks.find(book => book.id === id);
-export const find = (fields) => mockBooks.filter(book => {
+export const get = id => mockBooks.find(book => book.id === id);
+export const find = fields => mockBooks.filter((book) => {
   let ok = true;
   Object.keys(fields).forEach(key => ok = ok && book[key] === fields[key]);
   return ok;

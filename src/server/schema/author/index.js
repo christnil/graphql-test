@@ -27,9 +27,7 @@ export const AuthorDefs = [
 ];
 
 const AuthorResolver = {
-  books: (parent, params, context) => {
-    return BookModel.find({ authorId: parent.id });
-  },
+  books: (parent, params, context) => BookModel.find({ authorId: parent.id }),
 };
 
 export default AuthorResolver;

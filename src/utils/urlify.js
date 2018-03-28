@@ -1,6 +1,6 @@
-const array = "abcdefghijklmnopqrstuvxyz-_".split('');
+const array = 'abcdefghijklmnopqrstuvxyz-_'.split('');
 const dictionary = {};
-array.forEach(char => { dictionary[char] = char; });
+array.forEach((char) => { dictionary[char] = char; });
 dictionary[' '] = '-';
 
 export default function urlify(input) {

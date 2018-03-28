@@ -19,8 +19,7 @@ class BookDetails extends Component {
   }
 }
 
-export default graphql(
-  gql`
+export default graphql(gql`
     query BookQuery ($id: ID!) {
       book(id: $id) {
         title
@@ -33,10 +32,9 @@ export default graphql(
       }
     }
   `, {
-    options: props => ({
-      variables: {
-        id: props.id || props.match.params.bookKey,
-      },
-    }),
-  }
-)(BookDetails);
+  options: props => ({
+    variables: {
+      id: props.id || props.match.params.bookKey,
+    },
+  }),
+})(BookDetails);

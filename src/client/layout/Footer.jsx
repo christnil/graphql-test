@@ -17,8 +17,8 @@ class Footer extends Component {
 
 const styles = StyleSheet.create({
   footer: {
-      backgroundColor: 'black',
-      color: 'white',
+    backgroundColor: 'black',
+    color: 'white',
   },
 });
 

@@ -4,8 +4,13 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
+    "eslint": "^4.19.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
     "nodemon": "^1.14.11",
     "react-scripts": "1.1.0"
   },
@@ -34,6 +39,8 @@
     "start": "npm run start-server & npm run start-client",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .jsx,.js src",
+    "lint:fix": "eslint --ext .jsx,.js src --fix"
   }
 }

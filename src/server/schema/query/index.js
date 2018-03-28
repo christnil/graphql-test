@@ -11,6 +11,7 @@ export const Query = `
     author(id: ID!): Author
     navLinks: [Link]
     page(id: ID!): Page
+    pages: [Page]
   }
 `;
 
@@ -21,6 +22,7 @@ const QueryResolver = {
   author: (parent, params, context) => AuthorModel.get(params.id),
   navLinks: (parent, params, context) => NavBarModel.list(),
   page: (parent, params, context) => PageModel.get(params.id),
+  pages: (parent, params, context) => PageModel.list(),
 };
 
 export default QueryResolver;

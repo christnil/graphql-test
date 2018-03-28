@@ -8,7 +8,7 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 
 import AuthorList from '../author/AuthorList';
-import AuthorDetails from '../author/AuthorDetails'
+import AuthorDetails from '../author/AuthorDetails';
 import BookList from '../books/BookList';
 import Book from '../pages/Book';
 import Home from '../pages/Home';
