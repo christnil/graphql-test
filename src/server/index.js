@@ -1,15 +1,13 @@
 import Koa from 'koa';
-import koaRouter from 'koa-router';
+import KoaRouter from 'koa-router';
 import koaBody from 'koa-bodyparser';
 import { graphqlKoa, graphiqlKoa } from 'apollo-server-koa';
 import helmet from 'koa-helmet';
 
-import { makeExecutableSchema } from 'graphql-tools';
-
 import schema from './schema';
 
 const app = new Koa();
-const router = new koaRouter();
+const router = new KoaRouter();
 
 app.use(helmet());
 app.use(koaBody());
